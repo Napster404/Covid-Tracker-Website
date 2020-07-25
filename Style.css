@@ -1,0 +1,72 @@
+body{
+  background-image: linear-gradient(to bottom right, white,#cbeaed, #bbe1fa);
+  margin:0px;
+  border: 10px,solid, #000;
+}
+.head_color{
+  color: red;
+}
+ h1{
+   font-family: 'Heebo', sans-serif;
+   src: url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200&display=swap');
+  padding-top: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 3em;
+}
+.tab{
+  font-family: 'Heebo', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200&display=swap');
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1em;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.tab th {
+
+  background-color: #7fdbda;
+  color :white;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  text-align: left;
+  font-weight: bold;
+}
+.tab tbody td{
+  font-family: 'Heebo', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200&display=swap');
+
+  font-size:0.9em;
+  padding-left: 12px;
+  padding-right: 8px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+tr td:nth-child(2){
+  text-align: center;
+}
+tr td:nth-child(3){
+  text-align: center;
+}
+tr td:nth-child(4){
+  text-align: center;
+}
+tr td:nth-child(5){
+  text-align: center;
+}
+.tab tbody tr{
+  border-bottom: 1.5px solid #7fdbda;
+}
+.tab tr:nth-of-type(odd){
+  background-color: #f3f3f3;
+}
+.tab tr:nth-of-type(even){
+  background-color: #ffffff;
+}
+.tab tbody tr:last-of-type{
+  border-bottom: 4px solid #7fdbda;
+}

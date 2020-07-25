@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>COVID TRACKER</title>
+    <link rel = "stylesheet" href = "Style.css" />
+  </head>
+  <body onload="init()">
+      <h1 class = "heading" >COVID <span class = "head_color">TRACKER</span></h1>
+     <table id = "tab", class = "tab">
+      <thead id = "tdat">
+        <tr>
+          <th>Country</th>
+          <th>New Confirmed</th>
+          <th>Total Confirmed</th>
+          <th>Total Deaths</th>
+          <th>Total Recovered</th>
+          </tr>
+        </thead>
+        <tbody id = "tdata" padding = 25px>
+          <tr>
+          </tr>
+        </tbody>
+
+      </table>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+
+      init()
+
+
+      function init()
+      {
+         var url = "https://api.covid19api.com/summary"
+
+         $.get(url, function(data){
+           //console.log(data['Countries'])
+           var tdata = document.getElementById('tdata');
+
+           for(var i = 1; i<(data['Countries'].length); i++)
+           {
+             var x = tdata.insertRow();
+             x.insertCell(0);
+
+             tdata.rows[i].cells[0].innerHTML = data['Countries'][i-1]['Country'];
+
+             x.insertCell(1);
+
+             tdata.rows[i].cells[1].innerHTML = data['Countries'][i-1]['NewConfirmed'];
+
+             x.insertCell(2);
+
+             tdata.rows[i].cells[2].innerHTML = data['Countries'][i-1]['TotalConfirmed'];
+
+             x.insertCell(3);
+
+             tdata.rows[i].cells[3].innerHTML = data['Countries'][i-1]['TotalDeaths'];
+
+             x.insertCell(4);
+
+             tdata.rows[i].cells[4].innerHTML = data['Countries'][i-1]['TotalRecovered'];
+
+           }
+         })
+      }
+
+      })
+
+  </script>
+</html>
